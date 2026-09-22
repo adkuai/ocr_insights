@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Intelligence OCR</title>
+    <!-- Pointing directly to our fresh minimalist layout -->
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <!-- Main wrapper container matching view ports dynamically -->
+    <div style="max-width: 800px; margin: 0 auto; padding: 2rem 1rem;">
+        
+        <h2 class="text-center fw-bold mb-4" style="text-align: center; font-weight: 800; margin-bottom: 2rem;">
+            Hindi-English Document Intelligence
+        </h2>
+        
+        <!-- File Insertion Drop Box -->
+        <div class="custom-card" style="margin-bottom: 1.5rem;">
+            <input type="file" id="fileInput" class="form-control-lg" style="width: 100%; box-sizing: border-box; display: block;" accept=".pdf,.jpg,.jpeg,.png">
+            <button id="uploadBtn" class="btn-custom" style="width: 100%; margin-top: 1.25rem; cursor: pointer;">
+                Extract & Process Data
+            </button>
+            
+            <!-- Dynamic Moving Loading Component -->
+            <div id="loader" style="display: none; text-align: center; margin-top: 1.5rem;">
+                <div style="border: 4px solid #f3f3f3; border-top: 4px solid #2563eb; border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite; margin: 0 auto;"></div>
+                <p style="color: #2563eb; font-weight: 500; margin-top: 0.75rem; font-size: 0.95rem;">
+                    Processing file via Gemini Multimodal engine. Please wait...
+                </p>
+            </div>
+        </div>
+
+        <!-- Tabular Presentation Block (Hidden until parsed) -->
+        <div id="pdfContent" class="custom-card" style="display: none;">
+            <h4 style="color: #2563eb; font-weight: 700; margin-top: 0; margin-bottom: 1.5rem; border-bottom: 2px solid #f1f5f9; padding-bottom: 0.5rem;">
+                Extracted Report
+            </h4>
+            
+            <!-- Metadata Grid Layout -->
+            <h5 style="font-weight: 600; margin-bottom: 0.75rem; color: #475569; font-size: 1rem;">
+                General Document Details
+            </h5>
+            <div class="table-responsive" style="margin-bottom: 2rem;">
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 40%; text-align: left;">Field Name</th>
+                            <th style="text-align: left;">Extracted Value</th>
+                        </tr>
+                    </thead>
+                    <tbody id="metaTableBody"></tbody>
+                </table>
+            </div>
+
+            <!-- Transaction Grid Layout -->
+            <h5 style="font-weight: 600; margin-bottom: 0.75rem; color: #475569; font-size: 1rem;">
+                Line Items & Pricing Table
+            </h5>
+            <div class="table-responsive">
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th style="text-align: left;">Item Name</th>
+                            <th style="text-align: left;">Qty</th>
+                            <th style="text-align: left;">Unit</th>
+                            <th style="text-align: left;">Rate</th>
+                            <th style="text-align: left;">Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody id="itemsTableBody"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Spinner keyframe logic injected locally to decouple from internet dependencies -->
+    <style>
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+    
+    <script src="/static/script.js"></script>
+</body>
+</html>

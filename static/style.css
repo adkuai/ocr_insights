@@ -1,0 +1,95 @@
+/* Base Layout Overhauls */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+    padding-bottom: 3rem;
+}
+
+/* Heading Typography */
+h2 {
+    font-size: 2.25rem;
+    letter-spacing: -0.025em;
+    color: #0f172a;
+}
+
+/* Minimalist Card Blocks */
+.custom-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+    transition: all 0.2s ease-in-out;
+}
+
+/* File Input Enhancements */
+.form-control-lg {
+    border-radius: 10px;
+    border: 2px dashed #cbd5e1;
+    background-color: #f1f5f9;
+    padding: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.form-control-lg:focus {
+    border-color: #3b82f6;
+    box-shadow: none;
+    background-color: #ffffff;
+}
+
+/* Micro Utility Button Design */
+.btn-custom {
+    background-color: #2563eb;
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    padding: 0.875rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2);
+    transition: background-color 0.15s ease;
+}
+.btn-custom:hover {
+    background-color: #1d4ed8;
+    color: #ffffff;
+}
+
+/* Clean UI Tabular Presenter */
+.table-responsive {
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    overflow: hidden;
+    background: #ffffff;
+}
+.custom-table {
+    margin-bottom: 0;
+    width: 100%;
+}
+.custom-table th {
+    background-color: #f1f5f9 !important;
+    color: #475569 !important;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    padding: 1rem;
+    border-bottom: 2px solid #e2e8f0;
+}
+.custom-table td {
+    padding: 1rem;
+    font-size: 0.925rem;
+    color: #334155;
+    border-bottom: 1px solid #f1f5f9;
+}
+.custom-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Moving Spinner Adjustments */
+.spinner-custom {
+    color: #2563eb;
+    width: 2.5rem;
+    height: 2.5rem;
+}
