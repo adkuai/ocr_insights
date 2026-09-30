@@ -1,4 +1,4 @@
-# Multilingual Hybrid Document Intelligence System:
+# Multilingual Hybrid Document Intelligence System
 ### Powered by FastAPI & Open-Source Qwen2-VL (Hosted via Google Colab GPU)
 
 A high-performance, privacy-conscious micro-utility web application designed to extract structured information from printed or handwritten documents (Images and Multi-Page PDFs). The architecture seamlessly processes complex mixed scripts (English + Hindi Devanagari) and maps unstructured layouts into pristine data grids.
